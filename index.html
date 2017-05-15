@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script type="text/javascript">
+	function squareNum(num){
+
+		var squared = num * num;
+		console.log(squared);
+	}
+
+	function sum(num1, num2,num3){
+
+		var summed = num1 + num2 + num3;
+		console.log(summed);
+	}
+
+	var obj = {name: "brad",age: 99,occupation: "IT"};
+
+	function objects(){
+		
+		obj.name = "Joe";
+		console.log(obj);
+		
+		changeAge();
+		
+		function changeAge(){
+			obj.age++;
+
+		}
+		console.log(obj);
+	}
+
+	function strings(){
+		var text = "He said \"My name is brad\"";
+		console.log(text.toUpperCase() + 1);
+	}
+
+
+	function arrays() {
+
+		var myList = ['hi','hello','hey'];
+		console.log(myList.toString());
+		myList[myList.length] = 'howdy';
+		console.log(myList.toString());
+		myList.splice(3,1); 
+		console.log(myList.toString());
+	}
+
+	function ifs() {
+		var obj = {name: "brad",age: 21,occupation: "IT"};
+		if (obj.age > 20 && obj.age < 40) {
+			console.log("True")
+		}else{
+			console.log("False");
+		}
+	}
+
+	function fizzBuzz() {
+		var multi3 = [];
+		var multi3init = 0;
+
+		for (var i = 0; i <= 32; i++) {
+			multi3[multi3.length] = multi3init + 3;
+			multi3init = multi3init + 3;
+		}
+		console.log(multi3.toString());
+
+		var multi5 = [];
+		var multi5init = 0;
+
+		for (var i = 0; i <= 19; i++) {
+			multi5[multi5.length] = multi5init + 5;
+			multi5init = multi5init + 5;
+		}
+		console.log(multi5.toString());
+
+		for (var i = 0; i <= 100; i++) {
+			console.log(i);
+			if(multi3.includes(i) && multi5.includes(i)){
+				console.log(i + "FizzBuzz")
+			}
+			else if(multi5.includes(i)){
+				console.log(i + "Buzz")
+			}
+			else if (multi3.includes(i)){
+				console.log(i + "Fizz")
+			}
+		}
+	}
+
+	function randomer(argument) {
+		var rand = 20;
+
+		var multi3 = [];
+		var multi3init = 0;
+
+		for (var i = 0; i <= 32; i++) {
+			multi3[multi3.length] = multi3init + 3;
+			multi3init = multi3init + 3;
+		}
+		console.log(multi3.toString());
+
+
+		for (var i = rand; rand <= 0; i++) {
+			if (multi3.includes(rand)) {
+				rand = rand / 3;
+			}
+			else{
+				randadd = rand + 1;
+				randsub = rand - 1;
+				if (multi3.includes(randadd)) {
+					console.log("True Add");
+				 }else if(multi3.includes(randsub)) {
+				 	console.log("True Sub");
+				 }
+
+			}
+		}
+		
+	}
+
+</script>
+</head>
+<body>
+	<form>
+		<input type="button" onclick="squareNum(2)" value="Square Num" />
+	</form>     
+	<form>
+		<input type="button" onclick="sum(1,2,3)" value="Sum Three" />
+	</form>
+	<form>
+		<input type="button" onclick="objects()" value="Objects" />
+	</form>
+	<form>
+		<input type="button" onclick="strings()" value="Strings" />
+	</form>
+	<form>
+		<input type="button" onclick="arrays()" value="Arrays" />
+	</form>
+	<form>
+		<input type="button" onclick="ifs()" value="Ifs" />
+	</form>
+	<form>
+		<input type="button" onclick="fizzBuzz()" value="fizz Buzz" />
+	</form>
+	<form>
+		<input type="button" onclick="randomer()" value="Random Number" />
+	</form> 
+</body>
+</html>
